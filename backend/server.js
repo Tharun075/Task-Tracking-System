@@ -1,11 +1,15 @@
 const express = require('express')
+const cors = require('cors')
 const MongoConnect = require('./MongoDB/MongoConnection')
 const { TaskRouter } = require('./routes/taskRoutes')
 require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT
 
+//cors
+app.use(cors())
 app.use(express.json())
+
 
 //test
 app.get("/test",(req,res)=>{

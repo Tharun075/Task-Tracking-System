@@ -20,7 +20,6 @@ async function createTask(req,res){
     try{
         const newTask= new Task({
             taskname:taskname,
-            createdAt:Date.now(),
             status:status,
         })
 

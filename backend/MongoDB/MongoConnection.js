@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
-const LOCAL = process.env.LOCAL
+// const LOCAL = process.env.LOCAL
 const MONGO_URL = process.env.MONGO_URL
 
-function MongoConnect(){
+async function MongoConnect(){
     try{
-        mongoose.connect(MONGO_URL)
+        await mongoose.connect(MONGO_URL)
         console.log("MongoDB Connection successful!")
     }
     catch(err){

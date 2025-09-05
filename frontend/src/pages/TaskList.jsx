@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
 
-// const apiURL = import.meta.env.VITE_API_URL
-const localURL = import.meta.env.VITE_LOC_URL
+const apiURL = import.meta.env.VITE_API_URL
+// const localURL = import.meta.env.VITE_LOC_URL
 
 export function TaskList(){
     const [Tasks,setTasks] = useState([])
@@ -15,7 +15,7 @@ export function TaskList(){
 
     async function handleFetch(){
         try{
-            const res = await fetch(`${localURL}/tasks/getAllTasks`)
+            const res = await fetch(`${apiURL}/tasks/getAllTasks`)
             const data = await res.json()
 
             if(res.ok){

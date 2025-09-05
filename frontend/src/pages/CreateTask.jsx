@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-// const apiURL = import.meta.env.VITE_API_URL
-const localURL = import.meta.env.VITE_LOC_URL
+const apiURL = import.meta.env.VITE_API_URL
+// const localURL = import.meta.env.VITE_LOC_URL
 
 export function CreateTask() {
   const [TaskName, setTaskName] = useState('');
@@ -17,7 +17,7 @@ export function CreateTask() {
     }
 
     try {
-      const res = await fetch(`${localURL}/tasks/createTask`, {
+      const res = await fetch(`${apiURL}/tasks/createTask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

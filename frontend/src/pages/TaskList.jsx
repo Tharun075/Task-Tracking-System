@@ -50,7 +50,7 @@ export function TaskList(){
     async function handleUpdate(id, currentStatus) {
         const newStatus = currentStatus === 'completed' ? 'incomplete' : 'completed';
         try {
-        const res = await fetch(`${localURL}/tasks/updateTask/${id}`, {
+        const res = await fetch(`${apiURL}/tasks/updateTask/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: newStatus }),
@@ -70,7 +70,7 @@ export function TaskList(){
 
     async function handleDelete(id) {
         try {
-        const res = await fetch(`${localURL}/tasks/deleteTask/${id}`, {
+        const res = await fetch(`${apiURL}/tasks/deleteTask/${id}`, {
             method: 'DELETE',
         });
 

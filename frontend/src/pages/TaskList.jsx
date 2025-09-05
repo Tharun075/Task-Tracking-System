@@ -147,16 +147,16 @@ export function TaskList(){
                                     {item.taskname}
                                 </h3>
                                 <p>
-                                    <b>On:</b> {item.createdAt.slice(0,10)} <b>At: </b>{item.createdAt.slice(11,19)}
+                                    <b>On: </b> {item.createdAt.slice(0,10)} <b>At: </b>{item.createdAt.slice(11,19)}
                                 </p>
-
+                                <p><b>Status: </b>{item.status}</p>
                             </div>
                             <div className="flex justify-between px-2 py-2">
                                 <button
                                    onClick={() => handleUpdate(item._id, item.status)}
                                     className="bg-green-400 m-1 hover:bg-green-300"
                                 >
-                                    {item.status==='completed'?'Incomplete' : 'Completed'}
+                                    {item.status==='completed'?'Incomplete' : 'Complete'}
                                 </button>
                                 <button
                                     onClick={() => handleDelete(item._id)}

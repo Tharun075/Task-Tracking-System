@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate } from 'react-router-dom'
 const apiURL = import.meta.env.VITE_API_URL
 // const localURL = import.meta.env.VITE_LOC_URL
 
@@ -7,6 +7,7 @@ export function CreateTask() {
   const [TaskName, setTaskName] = useState('');
   const [TaskStatus, setTaskStatus] = useState('incomplete');
   const [msg, setMsg] = useState('');
+  const navigate = useNavigate()
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -34,6 +35,7 @@ export function CreateTask() {
         setMsg("Task created successfully!");
         setTaskName('');
         setTaskStatus(false);
+        navigate("/")
       } else {
         setMsg(`${data.msg || 'Failed to create task'}`);
       }

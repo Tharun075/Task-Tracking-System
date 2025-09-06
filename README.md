@@ -71,14 +71,6 @@ Before running this application, make sure you have the following installed:
    npm run dev
    ```
    
-   Or run separately:
-   ```bash
-   # Terminal 1 - Backend server
-   npm run server
-   
-   # Terminal 2 - Frontend client
-   npm run client
-   ```
 
 ## 🌐 API Endpoints
 
@@ -175,7 +167,9 @@ node server.js
 
 Tharun Unnikrishnan - tharunrt570@gmail.com
 
-Project Link: [https://github.com/yourusername/task-tracker](https://github.com/yourusername/task-tracker)
+Project Link: https://github.com/Tharun075/Task-Tracking-System.git
+Frontend(Netlify): https://splendorous-naiad-46a55e.netlify.app
+Backend(render): https://task-tracking-system-vsfx.onrender.com
 
 
 
